@@ -32,7 +32,7 @@ npx expo start
 
 ## Capturas de tela
 
-![Tela inicial](screenshots/tela-inicial.png)
-![Conversão válida](screenshots/conversao.png)
-![Erro de validação](screenshots/erro-validacao.png)
-![Valor decimal](screenshots/valor-decimal.png)
+![Tela inicial](tela-inicial.png.png)
+![Conversão válida](conversao.png.png)
+![Erro de validação](erro-validacao.png.png)
+![Valor decimal](valor-decimal.png.png)
