@@ -1,11 +1,38 @@
-# Sample Snack app
+# Conversor de Moedas
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+Aplicativo mobile de conversão de moedas feito com React Native (Expo), JavaScript e arquitetura MVVM. Os dados vêm da API pública Frankfurter (https://api.frankfurter.dev/v2).
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## Como instalar e executar
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+1. Instale o Node.js e clone este repositório.
+2. Na pasta do projeto, rode:
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+```bash
+npm install
+npx expo install @react-native-picker/picker
+npx expo start
+```
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+3. Abra no Expo Go (celular) ou em um emulador.
+
+## Arquitetura MVVM
+
+- `src/models/currencyModel.js`: acesso à API (lista de moedas e taxa de câmbio).
+- `src/viewmodels/useConverterViewModel.js`: estados, validações e cálculo da conversão.
+- `src/views/ConverterScreen.js`: tela do aplicativo.
+- `App.js`: ponto de entrada.
+
+## Funcionalidades
+
+- Lista de moedas carregada da API.
+- Validação do valor (vazio, zero, negativo, decimal com vírgula ou ponto).
+- Exibição da taxa e da data de referência retornadas pela API.
+- Tratamento de carregamento e de erros, com opção de tentar novamente.
+- Botão para inverter as moedas.
+
+## Capturas de tela
+
+![Tela inicial](screenshots/tela-inicial.png)
+![Conversão válida](screenshots/conversao.png)
+![Erro de validação](screenshots/erro-validacao.png)
+![Valor decimal](screenshots/valor-decimal.png)
